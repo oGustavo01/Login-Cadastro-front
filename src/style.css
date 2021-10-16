@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Bebas Neue", cursive;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #c4bebe;
+}
+.content {
+  background-color: #999090;
+  border-radius: 15px;
+  width: 960px;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.title {
+  color: #0e0b16;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.title-second {
+  color: #4717f6;
+}
+.description {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+}
+.description-primary {
+  color: #0e0b16;
+}
+.description-second {
+  color: #4717f6;
+}
+.btn {
+  border-radius: 15px;
+  color: #0e0b16;
+  font-size: 15px;
+  padding: 5px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: center;
+  margin-top: 1rem;
+}
+.btn-primary {
+  background-color: transparent;
+  border: 2px solid #0e0b16;
+  transition: background-color 1s;
+}
+.btn-primary:hover {
+  background-color: #0e0b16;
+  color: #4717f6;
+  font-weight: bold;
+}
+.btn-second {
+  border-radius: 15px;
+  color: #4717f6;
+  font-size: 15px;
+  padding: 5px 20px;
+  background-color: transparent;
+  border: 1px solid #4717f6;
+  transition: background-color 1s;
+}
+.btn-second:hover {
+  background-color: #0e0b16;
+  color: #4717f6;
+  font-weight: bold;
+}
+.content::before {
+  content: "";
+  position: absolute;
+  background-color: #4717f6;
+  width: 40%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+  left: 0;
+}
+.first-content {
+  display: flex;
+}
+.first-content .second-column {
+  z-index: 15;
+}
+.first-column {
+  text-align: center;
+  width: 40%;
+  z-index: 10;
+}
+.second-column {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social-media {
+  margin: 1rem 0;
+  font-size: 30px;
+}
+.list-social-media {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.item-social-media {
+  width: 35px;
+  height: 35px;
+  line-height: 50%;
+  text-align: center;
+  margin-left: 10px;
+}
+.item-social-media a {
+  color: #4717f6;
+  line-height: 50%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.form input {
+  height: 40px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #c4bebe;
+  margin: 10px;
+  line-height: 50%;
+}
+.label-input {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+.icon-modify {
+  color: #4717f6;
+  padding: 0 6px;
+  font-size: 20px;
+}
+/* second content */
+
+.second-content {
+  display: flex;
+  position: absolute;
+}
+.second-content .first-column {
+  order: 2;
+  z-index: -1;
+}
+.second-content .second-column {
+  order: 1;
+  z-index: -1;
+}
+.password {
+  color: #4717f6;
+  font-size: 14px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.sign-in-js .first-content .first-column,
+.sign-in-js .first-content .second-column {
+  z-index: -1;
+}
+.sign-in-js .second-content .second-column {
+  z-index: 11;
+}
+.sign-in-js .second-content .first-column {
+  z-index: 13;
+}
+.sign-in-js .content::before {
+  left: 60%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: slidein 3s;
+
+  z-index: 12;
+}
+.sign-up-js .content::before {
+  animation: slideout 3s;
+
+  z-index: 12;
+}
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column {
+  z-index: -1;
+}
+.sign-up-js .first-content .second-column {
+  z-index: 11;
+}
+.sign-up-js .first-content .first-column {
+  z-index: 13;
+}
+
+/* ANIMAÇÃO UM */
+
+@keyframes deslocamentoUp {
+  from {
+    left: 0;
+    opacity: 1;
+    z-index: 12;
+  }
+
+  25% {
+    left: 80px;
+    opacity: 0.5;
+  }
+
+  50% {
+    left: 100px;
+    opacity: 0.2;
+  }
+
+  to {
+    left: 110px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/*animação css*/
+
+@keyframes slidein {
+  from {
+    left: 0;
+    width: 40%;
+  }
+
+  25% {
+    left: 5%;
+    width: 50%;
+  }
+
+  50% {
+    left: 25%;
+    width: 60%;
+  }
+
+  75% {
+    left: 45%;
+    width: 50%;
+  }
+
+  to {
+    left: 60%;
+    width: 40%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    left: 60%;
+    width: 40%;
+  }
+
+  25% {
+    left: 45%;
+    width: 50%;
+  }
+
+  50% {
+    left: 25%;
+    width: 60%;
+  }
+
+  75% {
+    left: 5%;
+    width: 50%;
+  }
+
+  to {
+    left: 0;
+    width: 40%;
+  }
+}
